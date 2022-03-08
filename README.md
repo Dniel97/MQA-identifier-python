@@ -6,7 +6,7 @@ An MQA (Studio, originalSampleRate) identifier for "lossless" flac files written
 
 This project is a port of the awesome C++ project [MQA_identifier](https://github.com/purpl3F0x/MQA_identifier) by
 [@purpl3F0x](https://github.com/purpl3F0x) and [mqaid](https://github.com/redsudo/mqaid) by
-[redsudo](https://github.com/redsudo).
+[@redsudo](https://github.com/redsudo).
 
 ## Getting Started
 
@@ -30,24 +30,36 @@ This project is a port of the awesome C++ project [MQA_identifier](https://githu
 
 ## Usage
 
+```
+Usage: mqa-identifier-python.py [OPTIONS] [PATHS]...
+
+Options:
+  --fix-tags      Adds all the required tags for MQA such as MQAENCODE,
+                  ENCODER and ORIGINALSAMPLERATE.
+  -?, -h, --help  Show this message and exit.
+```
+
+### Usage example
+
 ```shell
-python3 mqa-identifier-python.py "path/to/flac/files"
+python3 mqa-identifier-python.py --fix-tags "path/to/flac/files"
 ```
 
 ```
 Found 11 FLAC files to check
+MQA files will be tagged, overwriting existing MQA tags!
 #	Encoding				Name
 1	NOT MQA					22. letzter song.flac
 2	NOT MQA					23. judy.flac
-3	MQA Studio 96kHz		01. Algorithm.mqa.flac
-4	MQA Studio 48kHz		02. The Dark Side.mqa.flac
-5	MQA Studio 96kHz		03. Pressure.mqa.flac
-6	MQA Studio 48kHz		04. Propaganda.mqa.flac
-7	MQA Studio 96kHz		05. Break It to Me.mqa.flac
-8	MQA Studio 96kHz		06. Something Human.mqa.flac
-9	MQA Studio 96kHz		07. Thought Contagion.mqa.flac
-10	MQA Studio 96kHz		08. Get up and Fight.mqa.flac
-11	MQA Studio 44.1kHz		09. Blockades.mqa.flac
+3	MQA Studio 96kHz		        01. Algorithm.mqa.flac
+4	MQA Studio 48kHz		        02. The Dark Side.mqa.flac
+5	MQA Studio 96kHz		        03. Pressure.mqa.flac
+6	MQA Studio 48kHz		        04. Propaganda.mqa.flac
+7	MQA Studio 96kHz		        05. Break It to Me.mqa.flac
+8	MQA Studio 96kHz		        06. Something Human.mqa.flac
+9	MQA Studio 96kHz		        07. Thought Contagion.mqa.flac
+10	MQA Studio 96kHz		        08. Get up and Fight.mqa.flac
+11	MQA Studio 44.1kHz		        09. Blockades.mqa.flac
 ```
 
 ## Contributing

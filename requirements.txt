@@ -1,2 +1,5 @@
 # Used for argmunets
 click>=8.0.1
+
+# Used for adding MQA tags
+mutagen>=1.45.1
